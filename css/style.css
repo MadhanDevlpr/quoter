@@ -3,6 +3,11 @@
 	margin: 0;
 	padding: 0;
 	font-family: 'Poppins', sans-serif;
+	transition: 1s;
+}
+html{
+	background: radial-gradient( transparent, rgba(0,0,0,1)), url('bg.jpg');
+	background-size: cover;
 }
 
 .header{
@@ -13,8 +18,7 @@
 	justify-content: center;
 	display: flex;
 	flex-direction: column;
-	background: linear-gradient(to bottom, transparent, rgba(0,0,0,1)), url('bg.jpg');
-	background-size: cover;
+	
 }
 .header h1{
 	color: #fff;
@@ -23,15 +27,30 @@
 	top: 20%;
 	left: 50%;
 	transform: translate(-50%,-50%);
+	white-space: nowrap;
+}
+.header .content{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background: rgba(255,255,255,0.25);
+	padding: 30px;
 }
 .header #quote{
 	color: #fff;
-	position: absolute;
-	font-size: xx-large;
-	top: 50%;
+	font-size: 30px;
 	text-shadow: 0 0 2px #fff;
-	left: 50%;
-	transform: translate(-50%,-50%);
+	transition: 1s;
+	width: 80vw;
+
+}
+.header #quotee{
+	color: #fff;
+	font-size: large;
+	text-shadow: 0 0 2px #fff;
+transition: 1s;
+
 }
 .header a{
 	padding: 10px 50px;
@@ -40,8 +59,41 @@
 	text-decoration: none;
 	background: #fff;
 	position: absolute;
-	top: 70%;
+	top: 80%;
 	text-shadow: 0 0 2px #fff;
 	left: 50%;
 	transform: translate(-50%,-50%);
+}
+
+@media (max-width: 1550px) {
+  .header #quote { font-size: 30px; }
+}
+@media (max-width: 850px) {
+  .header #quote { font-size: 25px; }
+}
+@media (max-width: 500px) {
+  .header #quote { font-size: 22px; }
+}
+
+
+@media (max-width: 300px) {
+  .header #quote { font-size: 16px; }
+}
+
+@keyframes change{
+	0%{
+		opacity: 0;
+	}
+	25%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 0;
+	}
+	75%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
 }
